@@ -8,6 +8,8 @@ use App\Repositories\BaseRepository;
 /* SUGESTÃO DE MELHORIA
     O nome da variável user não condiz com o retorno da query, o correto
     deveria ser company.
+
+    Alteraria o nome da classe para DocumentNumberIsValid ou IsDocumentNumberValid.
 */
 
 class CanUseDocumentNumber extends BaseRepository

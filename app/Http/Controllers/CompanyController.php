@@ -18,7 +18,7 @@ use App\Repositories\Company\Update as CompanyUpdate;
    Na função update é feita uma chamada direta no repository do company, 
    quebrando o princípio de separação de responsabilidades.
 
-   O correto seria chamad o respectivo useCase e depois este chamar o repository.
+   O correto seria chamar o respectivo useCase e depois este chamar o repository.
 */
 
 /* SUGESTÃO DE MELHORIA

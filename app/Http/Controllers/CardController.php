@@ -11,7 +11,7 @@ use App\Integrations\Banking\Card\Find;
 
 /* PONTO DE ATENÇÃO
     Dentro da função show há uma chamada direta na camada de integração,
-    o que quebra o princípio de separação de responsabilidades, cria acoplamento
+    o que quebra o princípio de separação de responsabilidades, cria acoplamento e
     dificulta os testes unitários.
     
     O correto seria que esta chamada do Find fosse realizada na camada de use cases.

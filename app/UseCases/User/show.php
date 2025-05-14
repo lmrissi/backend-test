@@ -5,6 +5,7 @@ namespace App\UseCases\User;
 use Throwable;
 use App\UseCases\BaseUseCase;
 use App\Repositories\User\Find;
+
 /* PONTO DE ATENÇÃO
     Utilizar nomes mais descritivos para as variáveis "a" e "b"
  */
@@ -12,6 +13,7 @@ use App\Repositories\User\Find;
 /* SUGESTÃO DE MELHORIA
     Alterar o nome do arquivo para "Show", para manter o padrão com letra maiúscula.
  */
+
 class show extends BaseUseCase
 {
     /**

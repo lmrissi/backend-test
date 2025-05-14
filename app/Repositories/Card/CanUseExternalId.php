@@ -5,6 +5,10 @@ namespace App\Repositories\Card;
 use App\Models\Card;
 use App\Repositories\BaseRepository;
 
+/* SUGESTÃO DE MELHORIAS
+    Alteraria o nome da classe para ExternalIdIsValid ou IsExternalIdValid.
+*/
+
 class CanUseExternalId extends BaseRepository
 {
     /**

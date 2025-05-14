@@ -5,6 +5,9 @@ namespace App\Repositories\User;
 use App\Models\User;
 use App\Repositories\BaseRepository;
 
+/* SUGESTÃO DE MELHORIA
+    Alteraria o nome da classe para DocumentNumberIsValid ou IsDocumentNumberValid.
+*/
 class CanUseDocumentNumber extends BaseRepository
 {
     /**
