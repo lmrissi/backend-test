@@ -6,6 +6,17 @@ use App\Models\User;
 use App\Repositories\BaseRepository;
 use Illuminate\Pagination\LengthAwarePaginator;
 
+/* PONTO DE ATENÇÃO
+    Não utilizar interpolação na query com SQL puro, isso expõe o código a SQL Injection.
+    Se possível utilizar uma ORM, para evitar isso.
+*/
+
+/* SUGESTÃO DE MELHORIA
+    Separar os filtros realizadas no handle em funções auxiliares.
+
+    Armazenar o valor INACTIVE em um enum
+*/
+
 class Retrieve extends BaseRepository
 {
     /**

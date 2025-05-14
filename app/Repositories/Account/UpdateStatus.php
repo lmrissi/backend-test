@@ -5,6 +5,11 @@ namespace App\Repositories\Account;
 use App\Models\Account;
 use App\Repositories\BaseRepository;
 
+/* SUGESTÃO DE MELHORIA
+    Injetar a dependência FindByUser, tornando o código mais legível e claro com o contrato da função
+    e também mais fácil de testar, pois assim você pode criar um mock no lugar. 
+*/
+
 class UpdateStatus extends BaseRepository
 {
     /**

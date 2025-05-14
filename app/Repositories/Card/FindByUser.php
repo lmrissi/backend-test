@@ -5,6 +5,10 @@ namespace App\Repositories\Card;
 use App\Models\Card;
 use App\Repositories\BaseRepository;
 
+/* SUGESTÃO DE MELHORIA
+    O método joinAccount nunca é utilizado no código não deveria ser chamado no handle?
+*/
+
 class FindByUser extends BaseRepository
 {
     /**

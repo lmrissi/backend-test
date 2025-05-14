@@ -6,6 +6,10 @@ use App\Models\Card;
 use App\Domains\Card\Register;
 use App\Repositories\BaseRepository;
 
+/* SUGESTÃO DE MELHORIA
+    Armazenar o valor do status 'ACTIVE' em um enum, facilitando possíveis alterações nesse valor.
+*/
+
 class Create extends BaseRepository
 {
     /**

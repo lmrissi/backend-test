@@ -5,6 +5,11 @@ namespace App\Repositories\Company;
 use App\Models\Company;
 use App\Repositories\BaseRepository;
 
+/* SUGESTÃO DE MELHORIA
+    O nome da variável user não condiz com o retorno da query, o correto
+    deveria ser company.
+*/
+
 class CanUseDocumentNumber extends BaseRepository
 {
     /**

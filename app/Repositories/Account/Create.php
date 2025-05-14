@@ -5,6 +5,19 @@ namespace App\Repositories\Account;
 use App\Models\Account;
 use App\Repositories\BaseRepository;
 
+/* SUGESTÃO DE MELHORIA
+    Alterar o nome da função handle para createAccount, por exemplo
+
+    Passar os dados para a função handle como parâmetros.
+    1- Reutilização sem precisar criar várias instâncias,
+    2- Facilita os testes, diminui o número de setups,
+    3- Não cria acoplamento com o estado da classe.
+
+    *Essa sugestão vale para todas as classes dentro de Reposotories
+
+    Armazenar o valor do status 'BLOCK' em um enum, facilitando possíveis alterações nesse valor.
+*/
+
 class Create extends BaseRepository
 {
     /**
