@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Http;
 use Tests\Providers\Banking\AccountProvider;
 use Symfony\Component\HttpFoundation\Response;
 
+/* SUGESTÃO DE MELHORIAS
+    O teste não cobre cenários de erro, apenas o caso de sucesso.
+    Possíveis cenários de erro para adicionar:
+        - Falha na autenticação
+        - Erro na resposta do banking ao tentar registrar
+        - O usuário não foi localizado
+*/
+
 class RegisterTest extends TestCase
 {
     /**

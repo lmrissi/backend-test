@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Http;
 use Tests\Providers\Banking\CardProvider;
 use Symfony\Component\HttpFoundation\Response;
 
+/* SUGESTÃO DE MELHORIAS
+    O teste não cobre cenários de erro, apenas o caso de sucesso.
+    Possíveis cenários de erro para adicionar:
+        - Falha na autenticação
+        - Falha no retorno do banking
+        - Falha para usuário sem cartão
+*/
+
 class ShowTest extends TestCase
 {
     /**

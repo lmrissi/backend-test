@@ -9,6 +9,19 @@ use Illuminate\Support\Facades\Http;
 use Tests\Providers\Banking\AccountProvider;
 use Symfony\Component\HttpFoundation\Response;
 
+/* SUGESTÃO DE MELHORIAS
+    O token está sendo criado para todos os testes, seria interessante centralizar isso
+    em um método auxiliar e ao final dos testes destruir esse token.
+
+    *Essa sugestão é válida para todos os testes
+
+    O teste não cobre cenários de erro, apenas o caso de sucesso.
+    Possíveis cenários de erro para adicionar:
+        - Falha na autenticação
+        - Erro na resposta do banking
+        - Conta já estava ativa
+*/
+
 class ActiveTest extends TestCase
 {
     /**

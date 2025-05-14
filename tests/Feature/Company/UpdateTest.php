@@ -5,6 +5,13 @@ namespace Tests\Feature\Company;
 use Tests\TestCase;
 use App\Models\User;
 
+/* SUGESTÃO DE MELHORIAS
+    O teste não cobre cenários de erro, apenas o caso de sucesso.
+    Possíveis cenários de erro para adicionar:
+        - Falha na autenticação
+        - Falha no retorno do update
+*/
+
 class UpdateTest extends TestCase
 {
     /**

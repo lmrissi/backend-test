@@ -6,6 +6,13 @@ use Tests\TestCase;
 use App\Models\User;
 use Faker\Provider\pt_BR\Person;
 
+/* SUGESTÃO DE MELHORIAS
+    O teste não cobre cenários de erro, apenas o caso de sucesso.
+    Possíveis cenários de erro para adicionar:
+        - Falha ao criar o usuário por erro no método validateUser
+*/
+
+
 class CreateTest extends TestCase
 {
     /**
