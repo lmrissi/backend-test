@@ -9,6 +9,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Responses\DefaultResponse;
 use App\Integrations\Banking\Card\Find;
 
+/* PONTO DE ATENÇÃO
+    Dentro da função show há uma chamada direta na camada de integração,
+    o que quebra o princípio de separação de responsabilidades, cria acoplamento
+    dificulta os testes unitários.
+    
+    O correto seria que esta chamada do Find fosse realizada na camada de use cases.
+*/
+
 class CardController extends Controller
 {
     /**

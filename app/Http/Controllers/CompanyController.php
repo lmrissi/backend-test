@@ -14,6 +14,17 @@ use App\Http\Resources\Company\UpdateResource;
 use App\Domains\Company\Update as UpdateDomain;
 use App\Repositories\Company\Update as CompanyUpdate;
 
+/* PONTO DE ATENÇÃO
+   Na função update é feita uma chamada direta no repository do company, 
+   quebrando o princípio de separação de responsabilidades.
+
+   O correto seria chamad o respectivo useCase e depois este chamar o repository.
+*/
+
+/* SUGESTÃO DE MELHORIA
+    Alterar o nome das variáveis domínio e resposta para inglês para manter o padrão.
+*/
+
 class CompanyController extends Controller
 {
     /**
