@@ -11,6 +11,15 @@ use App\Domains\Company\Create as CreateCompanyDomain;
 use App\Repositories\User\Create as CreateUserRepository;
 use App\Repositories\Company\Create as CreateCompanyRepository;
 
+/* PONTO DE ATENÇÃO
+    Sugiro alterar o fluxo das chamadas para que primeiro fossem feitas as validações da companhia e do usuário,
+    para depois fazer a criação do usuário. Da forma como está no código seria possível criar uma companhia com um usuário inválido.
+ */
+
+/* SUGESTÃO DE MELHORIA
+    Adicionar a tipagem de retorno de array na função handle
+ */
+
 class CreateFirstUser extends BaseUseCase
 {
     /**

@@ -7,6 +7,17 @@ use App\UseCases\BaseUseCase;
 use App\Repositories\Account\UpdateStatus as RepositoryUpdateStatus;
 use App\Integrations\Banking\Account\UpdateStatus as IntegrationUpdateStatus;
 
+/* PONTO DE ATENÇÃO
+    Para manter a consistência dos dados do BD com o BaaS, seria interessante alterar a ordem das chamadas 
+    das funções de atualização do status e realizar o controle da transação no banco de dados.
+
+    1- Realizar a tentativa de atualizar a conta no BaaS. Em caso de falha gerar log e abortar.
+    2- Em caso de sucesso de ativar no BaaS realiza a atualização no BD.
+    3- Em caso de falha na atualização no BD gerar logs apontando a necessidade de retentativa.
+    4- É possível implementar ainda uma política de retentativa de forma síncrôna ou assíncrona usando uma tabela
+    ou fila.
+ */
+
 class Block extends BaseUseCase
 {
     /**
