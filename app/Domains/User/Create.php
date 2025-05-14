@@ -8,6 +8,12 @@ use App\Repositories\User\CanUseEmail;
 use App\Exceptions\InternalErrorException;
 use App\Repositories\User\CanUseDocumentNumber;
 
+/* SUGESTÃO DE MELHORIA
+    O array ['USER', 'VIRTUAL', 'MANAGER'] é utilizado em outras partes do código, desta forma seria interessante criar uma constante
+    para que esse array fosse utilizado em outras partes do código. Além disso, a constante ajuda a facilitar o entendimento da utilização
+    daquele array.
+*/
+
 class Create extends BaseDomain
 {
     /**
