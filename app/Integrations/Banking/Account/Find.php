@@ -6,6 +6,14 @@ use App\Integrations\Banking\Gateway;
 use App\Repositories\Account\FindByUser;
 use App\Exceptions\InternalErrorException;
 
+/* PONTO DE ATENÇÃO
+    A camada de integração não deve acessar a camada de repository, o correto seria que o respectivo
+    useCase buscasse os dados no repository e preparasse os dados para essa camada utilizar.
+        1- Quebra a separação de responsabilidades
+        2- Gera acoplamento com a camada de infraestrutura da aplicação
+        3- Dificulta a realização de testes unitários e manutenção do código.
+*/
+
 class Find extends Gateway
 {
     /**

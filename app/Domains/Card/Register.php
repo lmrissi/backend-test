@@ -7,19 +7,20 @@ use App\Repositories\Account\FindByUser;
 use App\Exceptions\InternalErrorException;
 use App\Repositories\Card\CanUseExternalId;
 
-/* SUGESTÃO DE MELHORIA
-    Utilizar injeção de dependências FindByUser e CanUseExternalId no método construtor ou no handle
-
-    Utilizar nomes para o método handle que representam melhor a ação realizada
-    
+/* PONTO DE ATENÇÃO
     As chamadas nos repositories devem ser feitas pelos respectivos UseCases e não pelo Domain,
     evitando acoplamento desta camada com infraestrutura e APIs.
     
-    Facilita testar as regras de negócio sem precisar de mocks de BD ou retorno de API.
-    
-    Domain deve conter as entidades e regras de negócio, UseCase orquestra o fluxo de ações da aplicação.
+        1- Facilita testar as regras de negócio sem precisar de mocks de BD ou retorno de API.
+        2- Domain deve conter as entidades e regras de negócio, UseCase orquestra o fluxo de ações da aplicação.
 
-    *Vale para todas as classes de domain.
+    Utilizar injeção de dependências FindByUser e CanUseExternalId no método construtor ou no handle
+        1- No caso injetar a dependência do UseCase
+        2- Facilita leitura e entendimento do código pela assinatura do método
+        3- Reduz acoplamento e facilita utilização de mocks nos testes
+        4- Melhora na manutenção e reutilização, caso troque a lógica não afeta quem consome
+    
+    Utilizar nomes para o método handle que representam melhor a ação realizada
 */
 
 class Register extends BaseDomain

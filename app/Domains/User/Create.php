@@ -8,10 +8,23 @@ use App\Repositories\User\CanUseEmail;
 use App\Exceptions\InternalErrorException;
 use App\Repositories\User\CanUseDocumentNumber;
 
+/* PONTO DE ATENÇÃO
+    As chamadas nos repositories devem ser feitas pelos respectivos UseCases e não pelo Domain,
+    evitando acoplamento desta camada com infraestrutura e APIs.
+    
+        1- Facilita testar as regras de negócio sem precisar de mocks de BD ou retorno de API.
+        2- Domain deve conter as entidades e regras de negócio, UseCase orquestra o fluxo de ações da aplicação.
+
+    Utilizar injeção de dependência CanUseDocumentNumber e CanUseEmail no método construtor ou no handle
+        1- No caso injetar a dependência do UseCase
+    
+    Utilizar nomes para o método handle que representam melhor a ação realizada
+*/
+
 /* SUGESTÃO DE MELHORIA
     O array ['USER', 'VIRTUAL', 'MANAGER'] é utilizado em outras partes do código, desta forma seria interessante criar uma constante
-    para que esse array fosse utilizado em outras partes do código. Além disso, a constante ajuda a facilitar o entendimento da utilização
-    daquele array.
+    para facilitar a reutilização desse array. 
+    Além disso, a constante ajuda a facilitar o entendimento da utilização daquele array.
 */
 
 class Create extends BaseDomain
